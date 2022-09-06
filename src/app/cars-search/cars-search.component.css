@@ -1,0 +1,10 @@
+.time-picker {
+  width: -webkit-fill-available;
+}
+.invalid-feedback div {
+  color: #dc3545;
+}
+
+.search-button {
+  background-color: var(--secondary);
+}

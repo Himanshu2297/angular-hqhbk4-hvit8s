@@ -1,0 +1,16 @@
+<app-top-bar> </app-top-bar>
+<app-nav-bar *ngIf="pageHeader !== 'Sort' && pageHeader !== 'Search' "></app-nav-bar>
+
+<!-- [ngClass]="{
+  test: pageHeader === 'Travtor',
+  displayNone: pageHeader === 'Sort' || pageHeader === 'Search'
+}" -->
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

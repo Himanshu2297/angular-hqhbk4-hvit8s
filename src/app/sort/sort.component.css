@@ -1,0 +1,14 @@
+.sort-group label {
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.sort-group input {
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+  accent-color: var(--secondary);
+  cursor: pointer;
+}

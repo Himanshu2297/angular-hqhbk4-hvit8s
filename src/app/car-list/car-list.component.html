@@ -1,0 +1,71 @@
+<div class="location-container">
+  <span class="button material-icons" [routerLink]="['/']">arrow_back</span>
+  <div class="info">
+    <strong>{{ searchValues.pickUpLocation }}</strong>
+    <small
+      >{{ searchValues.pickUpDate | date: 'MMM dd' }},
+      {{ searchValues.formatedPickUpTime }} -
+      {{ searchValues.dropOffDate | date: 'MMM dd' }},
+      {{ searchValues.formatedDropOffTime }}</small
+    >
+  </div>
+</div>
+<div class="items-container">
+  <div
+    class="item"
+    *ngFor="let vehicle of vehicleDetails.carMockItineraries.CarItineraries"
+  >
+    <div class="px-3 d-flex">
+      <div class="image p-2 pt-3">
+        <img src="{{ vehicle.vehicle.image }}" alt="car" />
+      </div>
+
+      <div class="content p-2">
+        <h5>{{ vehicle.vehicle.type }}</h5>
+        <h6>{{ vehicle.vehicle.name }}</h6>
+        <ul>
+          <li>
+            <i class="material-icons"> groups </i>
+            <span>
+              {{ vehicle.vehicle.specifications.passengerCapacity }}
+            </span>
+          </li>
+          &nbsp; &nbsp;
+          <li>
+            <span class="material-icons">work_outline</span>
+            <span> {{ vehicle.vehicle.specifications.baggageCapacity }}</span>
+          </li>
+          &nbsp; &nbsp;
+          <li>
+            <span class="material-icons">speed</span>
+            <span>{{ vehicle.unlimitedMileage ? unlimitedMiles : '' }}</span>
+          </li>
+          &nbsp; &nbsp;
+        </ul>
+      </div>
+    </div>
+    <div class="px-3 highlights my-2">
+      <span>Free cancellation </span>untill
+      {{
+        vehicle.cancellationDetails.freeCancellationEndDate
+          | date: 'EEEE, MMMM d, y'
+      }}
+    </div>
+
+    <div class="bottom-text px-3 py-2">
+      <p class="m-0 mb-1">
+        <span>${{ vehicle.fare.perDay }}</span>
+        avg/day
+      </p>
+      <p class="mb-1">
+        Total (23 days):
+        <strong>{{ vehicle.fare.totalAmount }}</strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button (click)="sortResults()">Sort</button>
+    <button type="submit">Filter</button>
+  </div>
+</div>

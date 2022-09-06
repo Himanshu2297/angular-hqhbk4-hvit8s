@@ -1,0 +1,114 @@
+.items-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 120px);
+}
+
+.item {
+  box-shadow: 0px 1px 8px 0px #8f8f8f, 0px -11px 8px -10px #ccc;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.location-container {
+  width: 100%;
+  position: sticky;
+  top: 68px;
+  height: 55px;
+  background-color: var(--secondary);
+}
+.location-container .material-icons {
+    color:white;
+    margin-left: 15px;
+    float: left;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 54px;
+}
+
+.info strong {
+  color: #fff;
+  font-size: 15px;
+}
+.info small {
+  font-size: 14px;
+  color: #fff;
+}
+
+.bottom-text {
+  border-top: 1px solid #ccc;
+}
+
+.bottom-text span {
+  color: green;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bottom-text p {
+  font-size: 13px;
+}
+
+.bottom-text strong {
+  font-size: 14px;
+  color: #333;
+}
+
+.content h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.content h6 {
+  font-size: 14px;
+}
+
+.content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.content ul .material-icons {
+  font-size: 20px;
+  vertical-align: sub;
+  margin-right: 3px;
+}
+
+.image {
+  width: 120px;
+}
+
+.image img {
+  width: 100%;
+}
+
+.highlights span {
+  color: green;
+  font-weight: bold;
+}
+
+.btn-group {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  box-shadow: 1px 1px 10px 1px #1111115c;
+  width: 130px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.btn-group button {
+  background: white;
+  color: #1976d2;
+  border-right: 2px solid #ccc;
+}

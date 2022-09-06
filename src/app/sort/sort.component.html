@@ -1,0 +1,19 @@
+<div class="container-fluid px-4 mt-4">
+  <div [formGroup]="sortValueFormGroup">
+    <div *ngFor="let item of sortValues; let i = index" class="mb-2 sort-group">
+      <input
+        class="me-2"
+        type="radio"
+        formControlName="sortType"
+        id="radio{{ i }}"
+        name="sortType"
+        [value]="item.sortId"
+        (change)="backButton()"
+      />
+      <label class="custom-control-label" for="radio{{ i }}">
+        {{ item.sortValueBy || '?' }}
+      </label>
+    </div>
+  </div>
+</div>
+<!-- <button (click)="backButton()">Back</button> -->

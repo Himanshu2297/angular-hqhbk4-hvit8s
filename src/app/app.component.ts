@@ -24,7 +24,6 @@ export class AppComponent implements OnDestroy {
         } else {
           this.pageHeader = 'Travtor';
         }
-        // console.log(event.url);
       }
     });
   }

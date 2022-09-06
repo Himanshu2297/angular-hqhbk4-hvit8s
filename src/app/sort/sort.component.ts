@@ -42,7 +42,5 @@ export class SortComponent implements OnInit {
 
   backButton() {
     this.carSearchService.setSortDetails(this.sortValueFormGroup.value);
-    // this.router.navigate(['search']);
-    // console.log('in side sort compooo', this.sortValueFormGroup.value);
   }
 }

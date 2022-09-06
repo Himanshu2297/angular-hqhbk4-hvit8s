@@ -1,10 +1,8 @@
 <app-top-bar> </app-top-bar>
-<app-nav-bar *ngIf="pageHeader !== 'Sort' && pageHeader !== 'Search' "></app-nav-bar>
+<app-nav-bar
+  *ngIf="pageHeader !== 'Sort' && pageHeader !== 'Search'"
+></app-nav-bar>
 
-<!-- [ngClass]="{
-  test: pageHeader === 'Travtor',
-  displayNone: pageHeader === 'Sort' || pageHeader === 'Search'
-}" -->
 <div>
   <router-outlet></router-outlet>
 </div>

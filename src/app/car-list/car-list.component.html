@@ -41,12 +41,22 @@
         </ul>
       </div>
     </div>
-    <div class="px-3 highlights my-2">
+    <div
+      *ngIf="vehicle.cancellationDetails.isCancellationFree"
+      class="px-3 highlights my-2"
+    >
       <span>Free cancellation </span>untill
       {{
         vehicle.cancellationDetails.freeCancellationEndDate
           | date: 'EEEE, MMMM d, y'
       }}
+    </div>
+
+    <div
+      *ngIf="!vehicle.cancellationDetails.isCancellationFree"
+      class="px-3 highlightsCancel my-2"
+    >
+      <span>Cancellation fees may apply </span>
     </div>
 
     <div class="bottom-text px-3 py-2">

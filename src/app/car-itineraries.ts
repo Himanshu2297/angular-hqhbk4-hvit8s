@@ -5,7 +5,7 @@ export const car_list = {
       id: '8ITI1R2FVI61116-2304.1',
       unlimitedMileage: true,
       cancellationDetails: {
-        isCancellationFree: true,
+        isCancellationFree: false,
         freeCancellationEndDate: '2020-06-29T10:29:59',
       },
       fare: {

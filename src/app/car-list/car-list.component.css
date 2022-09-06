@@ -18,9 +18,9 @@
   background-color: var(--secondary);
 }
 .location-container .material-icons {
-    color:white;
-    margin-left: 15px;
-    float: left;
+  color: white;
+  margin-left: 15px;
+  float: left;
 }
 .info {
   display: flex;
@@ -91,6 +91,11 @@
 }
 
 .highlights span {
+  color: green;
+  font-weight: bold;
+}
+
+.highlightsCancel span {
   color: green;
   font-weight: bold;
 }

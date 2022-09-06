@@ -116,3 +116,7 @@
   color: #1976d2;
   border-right: 2px solid #ccc;
 }
+
+.margin-cars {
+  margin: 5px;
+}

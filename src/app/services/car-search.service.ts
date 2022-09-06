@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { car_list } from '../car-itineraries';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -40,14 +41,12 @@ export class CarSearchService {
       this.vehicleDetails.CarItineraries.sort((a, b) => {
         return a.fare.perDay - b.fare.perDay;
       });
-      console.log('sport', this.sortDetails.sortType);
     }
 
     if (this.sortDetails && this.sortDetails.sortType == '105') {
       this.vehicleDetails.CarItineraries.sort((a, b) => {
         return b.fare.perDay - a.fare.perDay;
       });
-      console.log('sport', this.sortDetails.sortType);
     }
 
     if (this.sortDetails && this.sortDetails.sortType == '106') {
@@ -63,8 +62,6 @@ export class CarSearchService {
         }
         return 0;
       });
-
-      console.log('sport', this.sortDetails.sortType);
     }
 
     if (this.sortDetails && this.sortDetails.sortType == '107') {
@@ -80,8 +77,6 @@ export class CarSearchService {
         }
         return 0;
       });
-
-      console.log('sport', this.sortDetails.sortType);
     }
     if (this.sortDetails && this.sortDetails.sortType == '108') {
       this.vehicleDetails.CarItineraries.sort((a, b) => {
@@ -96,8 +91,6 @@ export class CarSearchService {
         }
         return 0;
       });
-
-      console.log('sport', this.sortDetails.sortType);
     }
 
     if (this.sortDetails && this.sortDetails.sortType == '109') {
@@ -113,8 +106,6 @@ export class CarSearchService {
         }
         return 0;
       });
-
-      console.log('sport', this.sortDetails.sortType);
     }
     return this.vehicleDetails;
   }
@@ -128,7 +119,6 @@ export class CarSearchService {
   }
 
   setSortDetails(value) {
-    console.log('valueeee', value);
     this.sortDetails = value;
   }
 

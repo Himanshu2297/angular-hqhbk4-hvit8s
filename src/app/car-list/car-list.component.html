@@ -1,7 +1,7 @@
 <div class="location-container">
   <span class="button material-icons" [routerLink]="['/']">arrow_back</span>
   <div class="info">
-    <strong>{{ searchValues.pickUpLocation  }}</strong>
+    <strong>{{ searchValues.pickUpLocation }}</strong>
     <small
       >{{ searchValues.pickUpDate | date: 'MMM dd' }},
       {{ searchValues.formatedPickUpTime }} -
@@ -11,10 +11,7 @@
   </div>
 </div>
 <div class="items-container">
-  <div
-    class="item"
-    *ngFor="let vehicle of vehicleDetails.carMockItineraries.CarItineraries"
-  >
+  <div class="item" *ngFor="let vehicle of vehicleDetails.CarItineraries">
     <div class="px-3 d-flex">
       <div class="image p-2 pt-3">
         <img src="{{ vehicle.vehicle.image }}" alt="car" />
